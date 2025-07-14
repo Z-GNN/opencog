@@ -82,8 +82,11 @@ class TestAtomSpaceTestPatternMatching(unittest.TestCase):
     
     def test_pattern_matching(self):
         """Test pattern matching on real knowledge structures."""
-        from opencog.bindlink import execute_atom
-        from opencog.type_constructors import *
+        try:
+            from opencog.bindlink import execute_atom
+            from opencog.type_constructors import VariableNode, VariableList, InheritanceLink, BindLink
+        except ImportError:
+            self.skipTest("OpenCog bindlink not available")
         
         # Create a pattern to find all inheritance relationships
         # This tests real pattern matching, not mocked behavior
