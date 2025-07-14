@@ -79,7 +79,22 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 5. Build and Install CogServer
+      # 5. Build and Install AtomSpace Storage
+      - name: Build and Install AtomSpace Storage
+        run: |
+          # Clean existing directory
+          rm -rf atomspace-storage
+          # Clone the repository
+          git clone https://github.com/opencog/atomspace-storage.git
+          mkdir -p atomspace-storage/build
+          cd atomspace-storage/build
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+          make -j2
+          sudo make install
+          sudo ldconfig
+          cd ../..
+
+      # 6. Build and Install CogServer
       - name: Build and Install CogServer
         run: |
           # Clean existing directory
@@ -94,7 +109,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 6. Build and Install OpenCog
+      # 7. Build and Install OpenCog
       - name: Build and Install OpenCog
         run: |
           # Clean existing directory
@@ -109,7 +124,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 7. Build and Install AsmoSES
+      # 8. Build and Install AsmoSES
       - name: Build and Install AsmoSES
         run: |
           # Clean existing directory
@@ -124,7 +139,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 8. Build and Install URE
+      # 9. Build and Install URE
       - name: Build and Install URE
         run: |
           # Clean existing directory
@@ -139,7 +154,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 9. Build and Install Unify
+      # 10. Build and Install Unify
       - name: Build and Install Unify
         run: |
           # Clean existing directory
@@ -154,7 +169,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 10. Build and Install Attention
+      # 11. Build and Install Attention
       - name: Build and Install Attention
         run: |
           # Clean existing directory
@@ -169,7 +184,7 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 11. Build and Install Miner
+      # 12. Build and Install Miner
       - name: Build and Install Miner
         run: |
           # Clean existing directory
@@ -184,11 +199,17 @@ jobs:
           sudo ldconfig
           cd ../..
 
-      # 12. Run Tests for Each Component
+      # 13. Run Tests for Each Component
       - name: Run Tests
         run: |
           # AtomSpace Tests
           cd atomspace/build
+          make tests
+          make check ARGS="$MAKEFLAGS"
+          cd ../..
+
+          # AtomSpace Storage Tests
+          cd atomspace-storage/build
           make tests
           make check ARGS="$MAKEFLAGS"
           cd ../..
@@ -235,7 +256,7 @@ jobs:
           make check ARGS="$MAKEFLAGS"
           cd ../..
 
-      # 13. Upload Test Logs
+      # 14. Upload Test Logs
       - name: Upload Test Logs
         if: always()
         uses: actions/upload-artifact@v4
@@ -243,6 +264,7 @@ jobs:
           name: test-logs
           path: |
             atomspace/build/Testing/Temporary/LastTest.log
+            atomspace-storage/build/Testing/Temporary/LastTest.log
             cogserver/build/Testing/Temporary/LastTest.log
             opencog/build/Testing/Temporary/LastTest.log
             asmoses/build/Testing/Temporary/LastTest.log
@@ -251,7 +273,7 @@ jobs:
             attention/build/Testing/Temporary/LastTest.log
             miner/build/Testing/Temporary/LastTest.log
 
-      # 14. (Optional) Package Components
+      # 15. (Optional) Package Components
       - name: Package Components
         if: github.ref == 'refs/heads/main'
         run: |
@@ -262,7 +284,7 @@ jobs:
 
           # Repeat packaging for other components as needed
 
-      # 15. Upload Build Artifacts
+      # 16. Upload Build Artifacts
       - name: Upload Build Artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -271,6 +293,7 @@ jobs:
           path: |
             cogutil/build/
             atomspace/build/
+            atomspace-storage/build/
             cogserver/build/
             opencog/build/
             asmoses/build/
