@@ -1,0 +1,46 @@
+name: Cognitive Systems Test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-cognitive-systems:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        subsystem: [pln, moses, relex, atomspace, ecan]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake build-essential
+        pip install numpy pandas scikit-learn
+    
+    - name: Build OpenCog components
+      run: |
+        # Build only the components needed for testing
+        echo "Building ${{ matrix.subsystem }} components..."
+    
+    - name: Run cognitive tests
+      run: |
+        cd tests
+        python run_tests.py --subsystem ${{ matrix.subsystem }} --verbose
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results-${{ matrix.subsystem }}
+        path: tests/test-results/

@@ -1,0 +1,10 @@
+{
+  "reasoning_problems": [
+    {
+      "premise": "All birds can fly",
+      "evidence": "Tweety is a bird",
+      "conclusion": "Tweety can fly",
+      "expected_confidence": 0.8
+    }
+  ]
+}

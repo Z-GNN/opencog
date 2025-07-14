@@ -1,0 +1,67 @@
+{
+  "agent_id": "demo_agent_001",
+  "kernels": [
+    "embedding",
+    "attention",
+    "inference"
+  ],
+  "tensors": {
+    "updated_attention": {
+      "shape": [
+        1000,
+        3
+      ],
+      "type": "f32",
+      "semantic_meaning": "Updated Attention Values",
+      "metadata": {
+        "total_sti": 1000.0,
+        "resource_budget": 1000.0,
+        "attention_decay": 0.95
+      }
+    },
+    "inference_conclusion": {
+      "shape": [
+        2
+      ],
+      "type": "f32",
+      "semantic_meaning": "Conclusion Truth Value [strength, confidence]",
+      "metadata": {
+        "valid_premises": 10,
+        "conclusion_strength": 0.43379026651382446,
+        "conclusion_confidence": 0.365990549325943
+      }
+    }
+  },
+  "operation_log": [
+    {
+      "timestamp": "now",
+      "kernel": "attention",
+      "input_names": [
+        "current_attention",
+        "external_importance"
+      ],
+      "output_name": "updated_attention",
+      "complexity": "O(n\u00b2)",
+      "metadata": {
+        "total_sti": 1000.0,
+        "resource_budget": 1000.0,
+        "attention_decay": 0.95
+      }
+    },
+    {
+      "timestamp": "now",
+      "kernel": "inference",
+      "input_names": [
+        "reasoning_premises",
+        "rule_weights"
+      ],
+      "output_name": "inference_conclusion",
+      "complexity": "O(n)",
+      "metadata": {
+        "valid_premises": 10,
+        "conclusion_strength": 0.43379026651382446,
+        "conclusion_confidence": 0.365990549325943
+      }
+    }
+  ]
+}
