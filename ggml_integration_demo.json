@@ -26,9 +26,9 @@
       "type": "f32",
       "semantic_meaning": "Conclusion Truth Value [strength, confidence]",
       "metadata": {
-        "valid_premises": 10,
-        "conclusion_strength": 0.43379026651382446,
-        "conclusion_confidence": 0.365990549325943
+        "valid_premises": 7,
+        "conclusion_strength": 0.4403645694255829,
+        "conclusion_confidence": 0.43095189332962036
       }
     }
   },
@@ -58,9 +58,9 @@
       "output_name": "inference_conclusion",
       "complexity": "O(n)",
       "metadata": {
-        "valid_premises": 10,
-        "conclusion_strength": 0.43379026651382446,
-        "conclusion_confidence": 0.365990549325943
+        "valid_premises": 7,
+        "conclusion_strength": 0.4403645694255829,
+        "conclusion_confidence": 0.43095189332962036
       }
     }
   ]

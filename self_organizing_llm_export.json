@@ -1,0 +1,35 @@
+{
+  "agent_id": "demo_soll_001",
+  "system_status": {
+    "autonomous_mode": true,
+    "active_fragments": 2,
+    "mesh_registered": true
+  },
+  "cognitive_components": {
+    "scheme_adapter": "SchemeAdapter",
+    "tensor_architecture": "TensorFragmentArchitecture",
+    "resource_kernel": "ECANResourceKernel",
+    "symbolic_neural_kernel": "SymbolicNeuralKernel",
+    "grammar_inference_kernel": "GrammarInferenceKernel"
+  },
+  "performance_metrics": {
+    "processing_accuracy": 0.85,
+    "processing_efficiency": 0.78,
+    "fragment_coherence": 0.92
+  },
+  "meta_cognitive_data": {
+    "performance_history_length": 1,
+    "evolutionary_generations": 0
+  },
+  "hypergraph_statistics": {
+    "total_fragments": 2,
+    "fragment_types": [
+      "perception",
+      "attention",
+      "memory",
+      "temporal",
+      "action"
+    ]
+  },
+  "timestamp": "2025-07-14T02:28:39.915902"
+}
