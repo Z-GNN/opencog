@@ -1,0 +1,11 @@
+{
+  "regression_benchmark": {
+    "function": "y = x^2 + 2*x + 1",
+    "input_range": [
+      -10,
+      10
+    ],
+    "noise_level": 0.1,
+    "samples": 1000
+  }
+}

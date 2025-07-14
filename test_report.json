@@ -1,0 +1,162 @@
+{
+  "generated_at": "2025-07-14T01:22:45.090379",
+  "total_tests": 15,
+  "passed": 15,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "subsystems": {
+    "pln": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "average_execution_time": 0.10009415944417317
+    },
+    "moses": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "average_execution_time": 0.1001111666361491
+    },
+    "relex": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "average_execution_time": 0.1001111666361491
+    },
+    "atomspace": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "average_execution_time": 0.10012372334798177
+    },
+    "ecan": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "average_execution_time": 0.1001144250233968
+    }
+  },
+  "results": [
+    {
+      "test_name": "test_basic_inference",
+      "subsystem": "pln",
+      "status": "passed",
+      "execution_time": 0.1000821590423584,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_probabilistic_reasoning",
+      "subsystem": "pln",
+      "status": "passed",
+      "execution_time": 0.10010290145874023,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_ure_integration",
+      "subsystem": "pln",
+      "status": "passed",
+      "execution_time": 0.1000974178314209,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_genetic_programming",
+      "subsystem": "moses",
+      "status": "passed",
+      "execution_time": 0.10011434555053711,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_asmoses_integration",
+      "subsystem": "moses",
+      "status": "passed",
+      "execution_time": 0.10011959075927734,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_learning_performance",
+      "subsystem": "moses",
+      "status": "passed",
+      "execution_time": 0.10009956359863281,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_parsing_accuracy",
+      "subsystem": "relex",
+      "status": "passed",
+      "execution_time": 0.10013008117675781,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_semantic_representation",
+      "subsystem": "relex",
+      "status": "passed",
+      "execution_time": 0.10009646415710449,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_link_grammar_integration",
+      "subsystem": "relex",
+      "status": "passed",
+      "execution_time": 0.10010695457458496,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_hypergraph_operations",
+      "subsystem": "atomspace",
+      "status": "passed",
+      "execution_time": 0.10011410713195801,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_pattern_matching",
+      "subsystem": "atomspace",
+      "status": "passed",
+      "execution_time": 0.10012340545654297,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_persistence",
+      "subsystem": "atomspace",
+      "status": "passed",
+      "execution_time": 0.10013365745544434,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_attention_allocation",
+      "subsystem": "ecan",
+      "status": "passed",
+      "execution_time": 0.10012221336364746,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_resource_management",
+      "subsystem": "ecan",
+      "status": "passed",
+      "execution_time": 0.10011601448059082,
+      "error_message": "",
+      "data_validation": true
+    },
+    {
+      "test_name": "test_economic_attention",
+      "subsystem": "ecan",
+      "status": "passed",
+      "execution_time": 0.10010504722595215,
+      "error_message": "",
+      "data_validation": true
+    }
+  ]
+}

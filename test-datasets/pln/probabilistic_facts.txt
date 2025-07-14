@@ -1,0 +1,5 @@
+All birds can fly.
+Tweety is a bird.
+If it rains, the ground gets wet.
+Probabilistic reasoning handles uncertainty.
+Logic networks enable inference.
