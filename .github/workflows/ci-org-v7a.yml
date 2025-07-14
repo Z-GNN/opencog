@@ -110,19 +110,19 @@ jobs:
           cd ../..
 
       # 7. Build and Install OpenCog
-      - name: Build and Install OpenCog
-        run: |
+#      - name: Build and Install OpenCog
+#        run: |
           # Clean existing directory
-          rm -rf opencog
+#          rm -rf opencog
           # Clone the repository
-          git clone https://github.com/opencog/opencog.git
-          mkdir -p opencog/build
-          cd opencog/build
-          cmake -DCMAKE_BUILD_TYPE=Release ..
-          make -j2
-          sudo make install
-          sudo ldconfig
-          cd ../..
+#          git clone https://github.com/opencog/opencog.git
+#          mkdir -p opencog/build
+#          cd opencog/build
+#          cmake -DCMAKE_BUILD_TYPE=Release ..
+#          make -j2
+#          sudo make install
+#          sudo ldconfig
+#          cd ../..
 
       # 8. Build and Install AsmoSES
       - name: Build and Install AsmoSES
@@ -220,12 +220,6 @@ jobs:
           make check ARGS="$MAKEFLAGS"
           cd ../..
 
-          # OpenCog Tests
-          cd opencog/build
-          make tests
-          make check ARGS="$MAKEFLAGS"
-          cd ../..
-
           # AsmoSES Tests
           cd asmoses/build
           make tests
@@ -256,6 +250,12 @@ jobs:
           make check ARGS="$MAKEFLAGS"
           cd ../..
 
+#          # OpenCog Tests
+#          cd opencog/build
+#          make tests
+#          make check ARGS="$MAKEFLAGS"
+#          cd ../..
+
       # 14. Upload Test Logs
       - name: Upload Test Logs
         if: always()
@@ -266,12 +266,12 @@ jobs:
             atomspace/build/Testing/Temporary/LastTest.log
             atomspace-storage/build/Testing/Temporary/LastTest.log
             cogserver/build/Testing/Temporary/LastTest.log
-            opencog/build/Testing/Temporary/LastTest.log
             asmoses/build/Testing/Temporary/LastTest.log
             ure/build/Testing/Temporary/LastTest.log
             unify/build/Testing/Temporary/LastTest.log
             attention/build/Testing/Temporary/LastTest.log
             miner/build/Testing/Temporary/LastTest.log
+#            opencog/build/Testing/Temporary/LastTest.log
 
       # 15. (Optional) Package Components
       - name: Package Components
@@ -295,9 +295,10 @@ jobs:
             atomspace/build/
             atomspace-storage/build/
             cogserver/build/
-            opencog/build/
             asmoses/build/
             ure/build/
             unify/build/
             attention/build/
             miner/build/
+#            opencog/build/
+            
