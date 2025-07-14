@@ -24,12 +24,151 @@
   "hypergraph_statistics": {
     "total_fragments": 2,
     "fragment_types": [
-      "perception",
-      "attention",
-      "memory",
       "temporal",
-      "action"
+      "memory",
+      "attention",
+      "action",
+      "perception"
     ]
   },
-  "timestamp": "2025-07-14T02:28:39.915902"
+  "timestamp": "2025-07-14T03:03:49.511689",
+  "llm_ontogenesis": {
+    "ontogenesis_state": {
+      "agent_id": "demo_soll_001",
+      "ontogenesis_state": {
+        "developmental_stage": "emergence",
+        "emergence_patterns": [
+          {
+            "pattern_id": "emergent_a8bfd6aa",
+            "node_id": "ConceptNode_bf51f95e",
+            "complexity": 0.4679024384930071
+          }
+        ],
+        "self_modification_count": 1,
+        "cognitive_maturity_score": 0.016666666666666666
+      },
+      "memory_stats": {
+        "total_patterns": 4,
+        "most_used": [
+          "attention_pattern",
+          {
+            "type": "attention",
+            "complexity": 0.3,
+            "discovery_time": "2025-07-14T03:03:46.509000",
+            "usage_count": 0
+          }
+        ],
+        "recent_discoveries": 4
+      },
+      "active_tasks": 0,
+      "llm_kernels": [
+        "ontogenesis_demo_soll_001"
+      ],
+      "atomspace_nodes": 10,
+      "neural_symbolic_bridges": 0,
+      "self_modifications": 3,
+      "export_timestamp": "2025-07-14T03:03:49.511728"
+    },
+    "developmental_trajectory": {
+      "agent_id": "demo_soll_001",
+      "current_stage": "emergence",
+      "emergence_patterns": 1,
+      "self_modifications": 1,
+      "cognitive_maturity": 0.016666666666666666,
+      "memory_patterns": {
+        "total_patterns": 4,
+        "most_used": [
+          "attention_pattern",
+          {
+            "type": "attention",
+            "complexity": 0.3,
+            "discovery_time": "2025-07-14T03:03:46.509000",
+            "usage_count": 0
+          }
+        ],
+        "recent_discoveries": 4
+      },
+      "active_tasks": 0,
+      "llm_kernels": [
+        "ontogenesis_demo_soll_001"
+      ],
+      "atomspace_nodes": 10,
+      "neural_symbolic_bridges": 0,
+      "autonomy_modifications": 3
+    },
+    "atomspace_representation": {
+      "core_nodes": {
+        "llm_ontogenesis": "ConceptNode_b99a530a",
+        "cognitive_development": "ConceptNode_5e3b66dd",
+        "symbol_emergence": "ConceptNode_a299c3c8",
+        "self_modification": "ConceptNode_d085fb9b"
+      },
+      "subsystem_nodes": {
+        "memory_system": "ConceptNode_449fcf6e",
+        "task_system": "ConceptNode_5125136c",
+        "ai_system": "ConceptNode_1807a5ec",
+        "autonomy_system": "ConceptNode_407357f4"
+      },
+      "pattern_nodes": {
+        "emergent_pattern": "ConceptNode_11397f41"
+      },
+      "member_links": [
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_5e3b66dd"
+        ],
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_a299c3c8"
+        ],
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_d085fb9b"
+        ]
+      ],
+      "subsystem_links": [
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_449fcf6e"
+        ],
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_5125136c"
+        ],
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_1807a5ec"
+        ],
+        [
+          "ConceptNode_b99a530a",
+          "ConceptNode_407357f4"
+        ]
+      ],
+      "attention_link": [
+        "ConceptNode_b99a530a",
+        "ConceptNode_11397f41"
+      ]
+    },
+    "subsystems": {
+      "memory_system": {
+        "emergent_patterns": 4,
+        "token_activations": 0,
+        "weight_evolution_history": 0
+      },
+      "task_system": {
+        "active_tasks": 0,
+        "training_history": 0,
+        "meta_learning_cycles": 1
+      },
+      "ai_system": {
+        "llm_kernels": 1,
+        "atomspace_nodes": 10,
+        "neural_symbolic_bridges": 0
+      },
+      "autonomy_system": {
+        "self_modifications": 3,
+        "autonomy_rules": 2
+      }
+    }
+  }
 }
